@@ -12,6 +12,7 @@ The-F2E\_HotelReservation
 麻煩再自行取用了謝謝
 
 ## 運行
-* 使用 clone 載到專案資料夾
-* 運行npm install
-* 運行npm run dev開啟本端網頁
+1. 使用 clone 載到專案資料夾
+2. 運行npm install
+4. 將根列表 Vue-Hoter-Datepicker/dist 裡的檔案，複製並覆蓋至 node_modules/Vue-Hoter-Datepicker/dist
+3. 運行npm run dev開啟本端網頁
