@@ -1,6 +1,6 @@
 <template>
     <div id="app" v-if="getOb">
-      <div class="imgWrap">
+      <div class="imgWrap" @click.prevent="$router.push('/information/imgbox')">
         <a href="#" class="logo" @click.prevent="$router.push('preview')"></a>
         <img :src="item" v-for="(item, key) in getOb.imageUrl" :key="key">
       </div>
