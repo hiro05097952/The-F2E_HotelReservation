@@ -1,0 +1,51 @@
+.imgbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    span{
+        img{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 780px;
+            height: 425px;
+            box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.5);
+        }
+    }
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to{
+        opacity: 0;
+    }
+    i{
+        font-size: 70px;
+        color: white;
+        margin: 0 -50px;
+        font-weight: 100;
+        transform: scaleX(0.5);
+        cursor: pointer;
+    }
+    h3, p{
+        position: absolute;
+        bottom: 50px;
+        color: white;
+        letter-spacing: 1.7px;
+    }
+    h3{
+        left: 260px;
+    }
+    p{
+        right: 265px;
+    }
+}
