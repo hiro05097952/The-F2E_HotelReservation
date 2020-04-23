@@ -1,0 +1,149 @@
+.validateBox, .success, .error{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form, .wrap{
+        width: 423px;
+        height: 485px;
+        background-color: white;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+        h2{
+            font-size: 24px;
+            letter-spacing: 2.5px;
+            margin: 40px 42px 0;
+        }
+        >p{
+            margin: 10px 36px;
+            font-size: 30px;
+            transform: scaleY(0.4);
+            letter-spacing: -15px;
+            font-weight: 200;
+        }
+        label{
+            margin: 20px 0 0 42px;
+            display: block;
+            p{
+                display: inline-block;
+                font-size: 14px;
+                letter-spacing: 1.5px;
+                font-weight: 500;
+                width: 90px;
+            }
+            input{
+                height: 31px;
+                width: 240px;
+                border: 1px solid #C9C9C9;
+                border-radius: 5px;
+                outline: none;
+                padding-left: 16px;
+                box-sizing: border-box;
+                letter-spacing: 1.5px;
+            }
+            &.checkInOut{
+                input{
+                    width: 100px;
+                    padding-left: 8px;
+                    overflow: auto;
+                    color: #6D7278;
+                    &:nth-child(3){
+                        margin-left: 11px;
+                    }
+                    &:nth-child(2){
+                        margin-right: 11px;
+                    }
+                }
+            }
+        }
+        ul{
+            background-color: #EDEDED;
+            margin: 30px 0 20px;
+            padding: 15px 42px;
+            box-sizing: border-box;
+            li{
+                color: #6D7278;
+                font-size: 12px;
+                margin-top: 5px;
+                font-weight: 600;
+                display: flex;
+                &:nth-child(2){
+                    margin-top: 10px;
+                }
+                span{
+                    margin-left: auto;
+                    margin-right: 15px;
+                }
+            }
+        }
+        h3{
+            font-size: 26px;
+            color: #FF5C5C;
+            letter-spacing: 2.7px;
+            text-align: right;
+            margin-right: 50px;
+        }
+        button{
+            height: 37px;
+            background-color: #484848;
+            color: white;
+            padding: 0 23px;
+            margin: 25px 0 0 155px;
+            outline: none;
+            letter-spacing: 1.5px;
+            &:hover{
+                background-color: white;
+                border: 2px solid #575757;
+                color: #575757;
+                font-weight: 500;
+            }
+            &:active{
+                transform: translateY(2px);
+                &::after{
+                    background: none;
+                }
+            }
+            &.reset{
+                background-color: #D8D8D8;
+                color: #6D7278;
+                margin-left: 42px;
+                &:hover{
+                    border: 2px solid #6D7278;
+                    background-color: white;
+                    color: #6D7278;
+                    &~button{
+                        margin-left: 153px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.success, .error{
+    .wrap{
+        height: 248px;
+        >i{
+            display: block;
+            background: url(../tick-inside-circle.svg) center center no-repeat;
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            margin: -10px auto;
+        }
+        button{
+            margin: 35px 0 0 290px;
+        }
+        h4{
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            margin: 20px 50px 0;
+        }
+    }
+}

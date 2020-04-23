@@ -1,0 +1,143 @@
+@import '@/assets/sass/_font.scss';
+
+#app{
+    // background-color: tan;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 0 70px 54px;
+    box-sizing: border-box;
+    font-family: "Light";
+    img{
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .roomImg-leave-active{
+        transition: opacity 2s;
+    }
+    .roomImg-enter-active{
+        transition: opacity 3s;
+    }
+    .roomImg-enter, .roomImg-leave-to{
+        opacity: 0;
+    }
+    .logo{
+        background: url(../logo_white.svg) no-repeat center center;
+        block-size: cover;
+        width: 165px;
+        height: 165px;
+    }
+    .roomTitle{
+        color: white;
+        position: absolute;
+        bottom: 30px;
+        left: 72px;
+        letter-spacing: 2.5px;
+        h2{
+            font-size: 66px;
+            margin-left: 22px;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 86px;
+                height: 20px;
+                background: url(../border.svg) no-repeat center center;
+                // background-color: tan;
+                background-size: cover;
+                left: -3px;
+                bottom: 3px;
+            }
+        }
+        h3{
+            font-size: 24px;
+            margin-top: 15px;
+        }
+    }
+    .right{
+        position: absolute;
+        right: 0;
+        top: 40px;
+        ul.navbar{
+            width: 305px;
+            background-color: white;
+            padding: 34px 34px;
+            box-sizing: border-box;
+            overflow: hidden;
+            li{
+                margin-top: 34px;
+                font-size: 14px;
+                line-height: 20px;
+                position: relative;
+                &:nth-child(1){
+                    margin-top: 0;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                    letter-spacing: 1.5px;
+                }
+                &:hover::before{
+                    content: '——';
+                    position: absolute;
+                    left: -40px;
+                }
+            }
+        }
+        ul.footer{
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+            padding-left: 30px;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 280px;
+                height: 20px;
+                // background-color: tan;
+                background: url(../border.svg) no-repeat center center;
+                background-size: cover;
+                left: 25px;
+                bottom: 156px;
+            }
+            li{
+                margin-top: 10px;
+                i, a{
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    &#fbIcon{
+                        background: url(../facebook-square-brands.svg) no-repeat center center;
+                        background-size: cover;
+                    }
+                    &#igIcon{
+                        background: url(../instagram-brands.svg) center center no-repeat;
+                        background-size: cover;
+                        margin-left: 5px;
+                    }
+                    &#phoneIcon{
+                        background: url(../phone-alt-solid.svg) center center no-repeat;
+                        background-size: contain;
+                    }
+                    &#emailIcon{
+                        background: url(../envelope-solid.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#addressIcon{
+                        background: url(../home-solid.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                }
+                i{
+                    transform: translateY(5px);
+                }
+                &:nth-child(2){
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,251 @@
+@import '@/assets/sass/_font.scss';
+
+#app{
+    font-family: 'Light';
+    .imgWrap{
+        height: 450px;
+        width: 100vw;
+        position: relative;
+        a.logo{
+            display: inline-block;
+            position: absolute;
+            width: 165px;
+            height: 60px;
+            left: 40px;
+            top: 30px;
+            background: url(../logo_block.svg) center center no-repeat;
+            background-size: contain;
+            z-index: 5;
+        }
+        img{
+            width: 70vw;
+            height: 100%;
+            display: inline-block;
+            cursor: pointer;
+            &:nth-child(3), &:nth-child(4){
+                height: 50%;
+                width: 30vw;
+            }
+            &:nth-child(3){
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+    ul.infoL{
+        margin: 45px 0 0 62px;
+        width: 480px;
+        letter-spacing: 1.5px;
+        li{
+            font-size: 14px;
+            margin-top: 10px;
+            &.title{
+                font-size: 36px;
+                margin-bottom: 35px;
+                letter-spacing: 3.8px;
+                font-weight: 500;
+            }
+            &.desc{
+                font-size: 12px;
+                margin-top: 15px;
+                line-height: 20px;
+                letter-spacing: 1.3px;
+            }
+            &.br{
+                margin: 20px 0 23px;
+            }
+            &.checkin, &.checkout{
+                font-size: 22px;
+                display: inline-block;
+                letter-spacing: 2.5px;
+                h4{
+                    font-size: 14px;
+                    letter-spacing: 1.5px;
+                    margin-bottom: 4px;
+                }
+            }
+            &.checkout{
+                margin-left: 40px;
+            }
+        }
+    }
+    ul.infoR{
+        position: absolute;
+        left: 610px;
+        top: 80+410px;
+        li{
+            margin-top: 13px;
+            text-align: right;
+            letter-spacing: 1.5px;
+            &:nth-child(1){
+                font-size: 30px;
+                font-weight: 300;
+                letter-spacing: 3px;
+            }
+            &:nth-child(2), &:nth-child(4){
+                font-size: 14px;
+                color: #6D7278;
+            }
+            &:nth-child(3){
+                margin-top: 20px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    table.iconWrap{
+        margin: 40px 0 40px 62px;
+        width: 480px;
+        background-color: #F0F0F0;
+        letter-spacing: 1.3px;
+        tr{
+            height: 55px;
+            &:nth-child(1){
+                td{
+                    padding-top: 25px;
+                    i{
+                        top: 27px;
+                    }
+                }
+            }
+            &:nth-child(2){
+                td{
+                    padding-top: 12px;
+                    i{
+                        top: 22px;
+                    }
+                }
+            }
+            &:nth-last-child(1){
+                td{
+                    padding-bottom: 15px;
+                    i{
+                        top: 8px;
+                    }
+                }
+            }
+            td{
+                text-align: left;
+                vertical-align: middle;
+                padding-left: 60px;
+                position: relative;
+                font-size: 12px;
+                &.no{
+                    filter: opacity(0.3);
+                }
+                &:nth-child(1){
+                    width: 35%;
+                }
+                &:nth-child(2){
+                    width: 30%;
+                }
+                &:nth-child(3){
+                    width: 40%;
+                }
+                i{
+                    position: absolute;
+                    left: 30px;
+                    top: 16px;
+                    height: 20px;
+                    width: 20px;
+                    &#wifiIcon{
+                        background: url(../wifi.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#phoneIcon{
+                        background: url(../phone.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#viewIcon{
+                        background: url(../mountain-range.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#breakIcon{
+                        background: url(../breakfast.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#airconIcon{
+                        background: url(../breeze.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#smokeIcon{
+                        background: url(../no-smoke-symbol.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#minibarIcon{
+                        background: url(../bar.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#refIcon{
+                        background: url(../refIcon.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#childIcon{
+                        background: url(../crawling-baby-silhouette.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#serviceIcon{
+                        background: url(../room_service.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#sofaIcon{
+                        background: url(../sofaIcon.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &#petIcon{
+                        background: url(../dog.svg) center center no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+    .calendar{
+        width: 346px;
+        height: 384px;
+        // background-color: teal;
+        position: absolute;
+        top: 90+410px;
+        right: 110px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba($color: #000000, $alpha: 0.2)
+    }
+    button{
+        width: 118px;
+        height: 53px;
+        background-color: #575757;
+        position: absolute;
+        right: 338px;
+        top: 505+410px;
+        color: white;
+        letter-spacing: 1.7px;
+        font-size: 16px;
+        font-weight: 300;
+        outline: none;
+        &::after{
+            content: '';
+            width: 118px;
+            height: 56px;
+            position: absolute;
+            left: 4px;
+            top: 5px;
+            background: url(../border_black2.svg) center center no-repeat;
+            z-index: -1;
+        }
+        &.clearbtn{
+            right: 110px;
+        }
+        &:hover{
+            background-color: white;
+            border: 2px solid #575757;
+            color: #575757;
+            font-weight: 500;
+        }
+        &:active{
+            transform: translateY(2px);
+            &::after{
+                background: none;
+            }
+        }
+    }
+}

@@ -1,22 +1,51 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+
+import preview from '@/views/preview.vue';
+import information from '@/views/information.vue';
+import imgbox from '@/components/imgbox.vue';
+import validate from '@/components/validate.vue';
+import success from '@/components/success.vue';
+import error from '@/components/error.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home,
+    path: '*',
+    redirect: preview,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/',
+    name: 'preview',
+    component: preview,
+  },
+  {
+    path: '/information',
+    name: 'information',
+    component: information,
+    children: [
+      {
+        path: '/information/imgbox',
+        name: 'imgbox',
+        component: imgbox,
+      },
+      {
+        path: '/information/validate',
+        name: 'validate',
+        component: validate,
+      },
+      {
+        path: '/information/success',
+        name: 'success',
+        component: success,
+      },
+      {
+        path: '/information/error',
+        name: 'error',
+        component: error,
+      },
+    ],
   },
 ];
 
